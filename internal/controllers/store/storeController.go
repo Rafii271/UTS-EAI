@@ -1,10 +1,11 @@
 package store
 
 import (
-	"github.com/Rafii271/UTS-EAI/config"
-	"github.com/Rafii271/UTS-EAI/domain/entity"
 	"net/http"
 	"time"
+
+	"github.com/Rafii271/UTS-EAI/config"
+	"github.com/Rafii271/UTS-EAI/domain/entity"
 
 	"github.com/Rafii271/UTS-EAI/internal/dto"
 
@@ -226,6 +227,7 @@ func (s *StoreImplementation) GetStoreProducts(c *fiber.Ctx) error {
 			Name:        product.Name,
 			Description: product.Description,
 			Price:       product.Price,
+			Stock:       product.Stock,
 			Image:       product.Image,
 			Category:    product.Category.Name,
 			StoreName:   store.Name,
